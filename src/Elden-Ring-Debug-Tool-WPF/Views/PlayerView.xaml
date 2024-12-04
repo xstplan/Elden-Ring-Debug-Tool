@@ -26,8 +26,8 @@
 
 
             <Line Visibility="Hidden" Height="20"/>
-            <GroupBox Header="General Info">
-                <Expander ExpandDirection="Down" IsExpanded="True" Style="{StaticResource StatusGroupExpander}" Header="PlayerIns">
+            <GroupBox Header="基础信息">
+                <Expander ExpandDirection="Down" IsExpanded="True" Style="{StaticResource StatusGroupExpander}" Header="玩家信息">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -36,7 +36,7 @@
 
                         <StackPanel Grid.ColumnSpan="2">
                             <StackPanel Orientation="Horizontal">
-                                <Label Content="Name:"/>
+                                <Label Content="名称:"/>
                                 <Separator Visibility="Hidden" Width="20"/>
                                 <TextBox Text="{Binding Name}" Width="300"/>
                             </StackPanel>
@@ -47,7 +47,7 @@
                             </StackPanel>
                             <CheckBox Content="Padding" Visibility="Hidden"/>
                             <StackPanel Orientation="Horizontal">
-                                <Label Content="Chr Type:"/>
+                                <Label Content="角色类型:"/>
                                 <wpfTool:IntegerUpDown Value="{Binding PlayerIns.ChrType}" Width="50" Margin="5,0,0,0" Maximum="34" MouseDoubleClick="Label_MouseDoubleClick"/>
                                 <Separator Visibility="Hidden" Width="5"/>
                                 <CheckBox Content="Lock" IsChecked="{Binding LockChr}" VerticalAlignment="Center" />
@@ -65,7 +65,7 @@
                                 <Label Content="{Binding PlayerIns.Pointer}" MouseDoubleClick="Label_MouseDoubleClick"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <Label Content="Team Type:"/>
+                                <Label Content="团队类型:"/>
                                 <wpfTool:ByteUpDown Value="{Binding PlayerIns.TeamType}" Width="50" Margin="5,0,0,0" MouseDoubleClick="Label_MouseDoubleClick"/>
                                 <Separator Visibility="Hidden" Width="5"/>
                                 <CheckBox Content="Lock" IsChecked="{Binding LockTeam}" VerticalAlignment="Center"/>
@@ -78,8 +78,8 @@
                 </Expander>
             </GroupBox>
             <Separator Visibility="Hidden"/>
-            <GroupBox Header="Player Data">
-                <Expander ExpandDirection="Down" IsExpanded="True" Style="{StaticResource StatusGroupExpander}" Header="Data">
+            <GroupBox Header="玩家数据">
+                <Expander ExpandDirection="Down" IsExpanded="True" Style="{StaticResource StatusGroupExpander}" Header="数据">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
@@ -87,9 +87,9 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <StackPanel>
-                            <Label Content="Player Hp:"/>
-                            <Label Content="Player Fp: "/>
-                            <Label Content="Player Stam: "/>
+                            <Label Content="玩家 Hp:"/>
+                            <Label Content="玩家 蓝: "/>
+                            <Label Content="玩家 耐力: "/>
                         </StackPanel>
 
                         <StackPanel Grid.Column="1">
@@ -117,12 +117,12 @@
                                 <CheckBox Content="Lock" IsChecked="{Binding LockHp}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <Label Content="Base Fp:" />
+                                <Label Content="Base 蓝:" />
                                 <Label Content="{Binding PlayerIns.FpBase, Mode=OneWay}" MouseDoubleClick="Label_MouseDoubleClick"/>
                                 <CheckBox Content="Lock" IsChecked="{Binding LockFp}" VerticalAlignment="Center"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <Label Content="Base Fp:" />
+                                <Label Content="Base 耐力:" />
                                 <Label Content="{Binding PlayerIns.StaminaBase, Mode=OneWay}" MouseDoubleClick="Label_MouseDoubleClick"/>
                                 <CheckBox Content="Lock" IsChecked="{Binding LockStam}" VerticalAlignment="Center"/>
                             </StackPanel>
@@ -141,8 +141,8 @@
         <StackPanel Grid.Column="1">
             <Line Visibility="Hidden" Height="20"/>
 
-            <GroupBox Header="Status" >
-                <Expander IsExpanded="True" Style="{StaticResource StatusGroupExpander}" Header="Buildup Data">
+            <GroupBox Header="状态" >
+                <Expander IsExpanded="True" Style="{StaticResource StatusGroupExpander}" Header="积累数据">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -151,7 +151,7 @@
                         <StackPanel>
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Content="Poison: "/>
+                                    <Label Content="毒: "/>
                                     <Label Content="{Binding PlayerIns.Poison}" />
                                     <Label Content="/"/>
                                     <Label Content="{Binding PlayerIns.PoisonMax}"/>
@@ -160,7 +160,7 @@
                             </StackPanel>
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Content="Rot: "/>
+                                    <Label Content="腐烂: "/>
                                     <Label Content="{Binding PlayerIns.Rot}"/>
                                     <Label Content="/"/>
                                     <Label Content="{Binding PlayerIns.RotMax}"/>
@@ -169,7 +169,7 @@
                             </StackPanel>
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Content="Bleed: "/>
+                                    <Label Content="出血: "/>
                                     <Label Content="{Binding PlayerIns.Bleed}"/>
                                     <Label Content="/"/>
                                     <Label Content="{Binding PlayerIns.BleedMax}"/>
@@ -178,7 +178,7 @@
                             </StackPanel>
                             <StackPanel >
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Content="Frost: "/>
+                                    <Label Content="冰冻: "/>
                                     <Label Content="{Binding PlayerIns.Frost}"/>
                                     <Label Content="/"/>
                                     <Label Content="{Binding PlayerIns.FrostMax}"/>
@@ -190,7 +190,7 @@
                         <StackPanel Grid.Column="1">
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Content="Blight: "/>
+                                    <Label Content="腐败: "/>
                                     <Label Content="{Binding PlayerIns.Blight}"/>
                                     <Label Content="/"/>
                                     <Label Content="{Binding PlayerIns.BlightMax}"/>
@@ -199,7 +199,7 @@
                             </StackPanel>
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Content="Sleep: "/>
+                                    <Label Content="腐烂: "/>
                                     <Label Content="{Binding PlayerIns.Sleep}"/>
                                     <Label Content="/"/>
                                     <Label Content="{Binding PlayerIns.SleepMax}"/>
@@ -208,7 +208,7 @@
                             </StackPanel>
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Content="Madness: "/>
+                                    <Label Content="癫火: "/>
                                     <Label Content="{Binding PlayerIns.Madness}"/>
                                     <Label Content="/"/>
                                     <Label Content="{Binding PlayerIns.MadnessMax}"/>
@@ -223,18 +223,18 @@
                 </Expander>
             </GroupBox>
             <Separator Visibility="Hidden"/>
-            <GroupBox Header="Status" >
-                <Expander IsExpanded="True" Style="{StaticResource StatusGroupExpander}" Header="Buildup Data">
+            <GroupBox Header="状态" >
+                <Expander IsExpanded="True" Style="{StaticResource StatusGroupExpander}" Header="积累数据">
                     <StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="Stagger: "/>
+                            <Label Content="击倒: "/>
                             <Label Content="{Binding PlayerIns.Stagger}"/>
                             <Label Content="/"/>
                             <Label Content="{Binding PlayerIns.StaggerMax}"/>
                         </StackPanel>
                         <ProgressBar Value="{Binding PlayerIns.Stagger}" Maximum="{Binding PlayerIns.StaggerMax}" />
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="Reset Time: "/>
+                            <Label Content="重置时间: "/>
                             <Label Content="{Binding PlayerIns.ResetTime}"/>
                         </StackPanel>
                         <ProgressBar Value="{Binding PlayerIns.ResetTime}" Maximum="5" />
@@ -242,10 +242,10 @@
                 </Expander>
             </GroupBox>
             <Separator Visibility="Hidden"/>
-            <GroupBox Header="Animations">
+            <GroupBox Header="动画">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Current Animation: "/>
+                        <Label Content="当前动画: "/>
                         <Label Content="{Binding PlayerIns.CurrentAnimation}"/>
                     </StackPanel>
                 </StackPanel>

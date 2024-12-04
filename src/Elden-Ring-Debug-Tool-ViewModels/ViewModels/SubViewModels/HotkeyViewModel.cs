@@ -82,7 +82,7 @@ namespace Elden_Ring_Debug_Tool_ViewModels.ViewModels.SubViewModels
             _mainWindowViewModel = mainWindowViewModel;
             _parentViewModel = parentViewModel;
 
-            ParentViewModelName = "Missing Parent Description";
+            ParentViewModelName = "缺少父级描述";
 
             DescriptionAttribute? description = _parentViewModel.GetType().GetCustomAttribute<DescriptionAttribute>();
 

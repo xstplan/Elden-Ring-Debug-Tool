@@ -16,15 +16,15 @@
             <StackPanel Margin="25,25,25,0">
                 <Label Content="Warning:" HorizontalAlignment="Center" FontSize="25" FontWeight="Black"/>
                 <TextBlock TextWrapping="Wrap" TextAlignment="Center" Style="{StaticResource TextBlockStyle}">
-                    This tool is not intended for use online.<LineBreak/>
-                    Any negative consequences of using this tool online are not the fault of this tool or it's author(s).<LineBreak/>
-                    You have been warned.<LineBreak/>
-                    Delete any saves (Entire save file) made/modified with this tool before going online.
+                  此工具并非设计用于在线使用。<LineBreak/>
+                   任何因在线使用此工具而产生的负面后果，与此工具及其作者无关。<LineBreak/>
+                  您已被警告。<LineBreak/>
+                  在上线前，请删除使用此工具创建或修改的所有存档（整个存档文件）。
                 </TextBlock>
                 <Separator Visibility="Hidden" Height="5" />
-                <CheckBox x:Name="cbxDoNotShow" HorizontalAlignment="Center" Content="Do not show again" />
+            <CheckBox x:Name="cbxDoNotShow" HorizontalAlignment="Center" Content="不再显示" />
                 <Separator Visibility="Hidden" Height="5"/>
-                <Button Content="Okay" IsCancel="True" Width="75"/>
+                <Button Content="同意" IsCancel="True" Width="75"/>
             </StackPanel>
 
     </Grid>

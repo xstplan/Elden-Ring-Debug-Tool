@@ -19,10 +19,10 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel>
-            <Label Content="Debug Commands" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="ExtraBlack"/>
+            <Label Content="调试命令" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="ExtraBlack"/>
             <Grid>
                 <wpfTool:AutoSelectTextBox Height="20" Text="{Binding CommandFilter, UpdateSourceTrigger=PropertyChanged}" AutoSelectBehavior="OnFocus" TextAlignment="Center"/>
-                <Label Foreground="LightSlateGray" Content="Search..." IsEnabled="False" Margin="5,0,0,0" IsHitTestVisible="False"
+                <Label Foreground="LightSlateGray" Content="搜索..." IsEnabled="False" Margin="5,0,0,0" IsHitTestVisible="False"
                            Visibility="{Binding CommandFilter, Converter={StaticResource ResourceKey=StringToVisibilityConverter}}" HorizontalContentAlignment="Center"/>
             </Grid>
         </StackPanel>
@@ -52,8 +52,8 @@
                 </Style>
             </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}" MinWidth="150" Width="*"/>
-                <DataGridTemplateColumn Header="Toggle State" MinWidth="75" Width="Auto">
+                <DataGridTextColumn Header="名称" Binding="{Binding Name}" MinWidth="150" Width="*"/>
+                <DataGridTemplateColumn Header="切换状态" MinWidth="75" Width="Auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate >
                             <ToggleButton Height="25" Width="25" Style="{StaticResource ToggleButtonPower}" 
@@ -63,7 +63,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="HotKey" MinWidth="100" Width="Auto" >
+                <DataGridTemplateColumn Header="热键" MinWidth="100" Width="Auto" >
                     <DataGridTemplateColumn.CellTemplate >
                         <DataTemplate >
                             <TextBox Margin="10,0,10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
@@ -72,7 +72,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Parameters" Width="50" >
+                <DataGridTemplateColumn Header="参数" Width="50" >
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <ToggleButton Height="25" Width="25" Style="{StaticResource ToggleButtonParameters}"

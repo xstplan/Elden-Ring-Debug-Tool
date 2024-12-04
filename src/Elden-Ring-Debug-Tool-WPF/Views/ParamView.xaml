@@ -234,15 +234,15 @@
             <StackPanel Orientation="Horizontal" 
                         HorizontalAlignment="Center">
 
-                <Button Content="Save Param" Command="{Binding SaveParamCommand}" HorizontalAlignment="Center" 
+                <Button Content="保存参数" Command="{Binding SaveParamCommand}" HorizontalAlignment="Center" 
                         Width="100" Margin="0,15,0,0" />
                 <Separator Visibility="Hidden" Width="20"/>
 
-                <Button Content="Open Folder" Command="{Binding OpenParamCaptureFolderCommand}" HorizontalAlignment="Center" 
+                <Button Content="打开文件夹" Command="{Binding OpenParamCaptureFolderCommand}" HorizontalAlignment="Center" 
                         Width="100" Margin="0,15,0,0" />
                 <Separator Visibility="Hidden" Width="20"/>
 
-                <Button Content="Reset Param" Command="{Binding ResetParamCommand}" HorizontalAlignment="Center"
+                <Button Content="重置参数" Command="{Binding ResetParamCommand}" HorizontalAlignment="Center"
                         Width="100" Margin="0,15,0,0" />
             </StackPanel>
 
@@ -262,7 +262,7 @@
         <wpfTool:AutoSelectTextBox Text="{Binding RowFilter, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="0" 
                  HorizontalContentAlignment="Center" IsEnabled="{Binding Setup}" AutoSelectBehavior="OnFocus"/>
 
-        <TextBlock Text="Search Rows..." Grid.Row="1" Grid.Column="0" Margin="5,2" MinWidth="50" 
+        <TextBlock Text="搜索行..." Grid.Row="1" Grid.Column="0" Margin="5,2" MinWidth="50" 
                    HorizontalAlignment="Center" Foreground="DarkGray" 
                    Visibility="{Binding RowFilter, Converter={StaticResource ResourceKey=StringToVisibilityConverter}}" 
                    IsHitTestVisible="False"/>
@@ -272,7 +272,7 @@
         <wpfTool:AutoSelectTextBox Text="{Binding FieldFilter, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="2" 
                  HorizontalContentAlignment="Center" IsEnabled="{Binding Setup}" AutoSelectBehavior="OnFocus"/>
 
-        <TextBlock Text="Search Fields..." Grid.Row="1" Grid.Column="2" Margin="5,2" MinWidth="50"  
+        <TextBlock Text="搜索字段..." Grid.Row="1" Grid.Column="2" Margin="5,2" MinWidth="50"  
                    HorizontalAlignment="Center" Foreground="DarkGray" 
                    Visibility="{Binding FieldFilter, Converter={StaticResource ResourceKey=StringToVisibilityConverter}}" 
                    IsHitTestVisible="False"/>

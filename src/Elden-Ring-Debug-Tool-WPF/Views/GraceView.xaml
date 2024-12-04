@@ -33,13 +33,13 @@
         </Grid.RowDefinitions>
         <StackPanel Margin="25">
             <StackPanel>
-                <Label Content="Quick Warp" HorizontalAlignment="Center"/>
+                <Label Content="快速传送" HorizontalAlignment="Center"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <CheckBox Content="Quick Select Bonfire" Margin="10,0,265,0" VerticalAlignment="Center" IsChecked="{Binding QuickSelectBonfire}"/>
+                    <CheckBox Content="快速传送赐福" Margin="10,0,265,0" VerticalAlignment="Center" IsChecked="{Binding QuickSelectBonfire}"/>
                 </StackPanel>
                 <Grid HorizontalAlignment="Center" Margin="0,0,82,0">
                     <wpfTool:AutoSelectTextBox Height="20" AutoSelectBehavior="OnFocus" Width="300" Text="{Binding GraceFilter, UpdateSourceTrigger=PropertyChanged}"/>
-                    <Label Foreground="LightSlateGray" Content="Search..." IsEnabled="False" Margin="5,0,0,0" IsHitTestVisible="False"
+                    <Label Foreground="LightSlateGray" Content="搜索..." IsEnabled="False" Margin="5,0,0,0" IsHitTestVisible="False"
                            Visibility="{Binding GraceFilter, Converter={StaticResource ResourceKey=StringToVisibilityConverter}}"/>
                 </Grid>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -68,33 +68,33 @@
                         </ComboBox.ItemTemplate>
             
                     </ComboBox>
-                    <Button Content="Warp" Width="75" Margin="10,0,0,0" Command="{Binding WarpCommand}" CommandParameter="{Binding SelectedGraceViewModel.EntityID}"/>
+                    <Button Content="传送" Width="75" Margin="10,0,0,0" Command="{Binding WarpCommand}" CommandParameter="{Binding SelectedGraceViewModel.EntityID}"/>
                 </StackPanel>
             </StackPanel>
 
         </StackPanel>
         <StackPanel Grid.Row="1">
-            <Label Content="Grace" FontSize="20" HorizontalAlignment="Center" />
+            <Label Content="赐福" FontSize="20" HorizontalAlignment="Center" />
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Label Content="Last Grace: " FontSize="20" HorizontalAlignment="Center"  />
+                <Label Content="最后 赐福: " FontSize="20" HorizontalAlignment="Center"  />
                 <Label Content="{Binding LastGraceViewModel.Name}" FontSize="20" HorizontalAlignment="Center" Foreground="Gold" />
             </StackPanel>
             <Separator Visibility="Hidden" Height="10" />
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Unlock All" Width="125" HorizontalAlignment="Center" Margin="25,0,25,0" Command="{Binding ManageAllGraceCommand}" CommandParameter="True" />
+                <Button Content="全部解锁" Width="125" HorizontalAlignment="Center" Margin="25,0,25,0" Command="{Binding ManageAllGraceCommand}" CommandParameter="True" />
                 <Separator Visibility="Hidden" Height="10" />
-                <Button Content="Lock All" Width="125" HorizontalAlignment="Center" Margin="25,0,25,0" Command="{Binding ManageAllGraceCommand}" CommandParameter="False" />
+                <Button Content="全部锁定" Width="125" HorizontalAlignment="Center" Margin="25,0,25,0" Command="{Binding ManageAllGraceCommand}" CommandParameter="False" />
             </StackPanel>
             <Separator Visibility="Hidden" Height="10" />
             <Separator Height="1" />
-            <Label Content="Manage Graces" HorizontalAlignment="Center" />
+            <Label Content="管理赐福" HorizontalAlignment="Center" />
 
         </StackPanel>
         <StackPanel Grid.Row="2" Margin="25,0,25,0">
             <StackPanel  Margin="40,0,40,0" >
                 <Grid HorizontalAlignment="Center" Margin="0,0,0,0">
                     <wpfTool:AutoSelectTextBox Height="20" AutoSelectBehavior="OnFocus" HorizontalContentAlignment="Center" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=StackPanel}}" Text="{Binding HubFilter, UpdateSourceTrigger=PropertyChanged}"/>
-                    <Label Foreground="LightSlateGray" Content="Search..." HorizontalContentAlignment="Center" IsEnabled="False" Margin="5,0,0,0" IsHitTestVisible="False"
+                    <Label Foreground="LightSlateGray" Content="搜索..." HorizontalContentAlignment="Center" IsEnabled="False" Margin="5,0,0,0" IsHitTestVisible="False"
                            Visibility="{Binding HubFilter, Converter={StaticResource ResourceKey=StringToVisibilityConverter}}"/>
                 </Grid>
             </StackPanel>
@@ -130,9 +130,9 @@
 
             </ComboBox>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Unlock All in Hub" Width="125" HorizontalAlignment="Center" Margin="25,0,25,0" Command="{Binding ManageAllHubsCommand}" CommandParameter="True" />
+                <Button Content="解锁所有内容（在主界面）" Width="125" HorizontalAlignment="Center" Margin="25,0,25,0" Command="{Binding ManageAllHubsCommand}" CommandParameter="True" />
                 <Separator Visibility="Hidden" Height="10" />
-                <Button Content="Lock All in Hub" Width="125" HorizontalAlignment="Center" Margin="25,0,25,0" Command="{Binding ManageAllHubsCommand}" CommandParameter="False" />
+                <Button Content="锁定所有内容（在主界面" Width="125" HorizontalAlignment="Center" Margin="25,0,25,0" Command="{Binding ManageAllHubsCommand}" CommandParameter="False" />
             </StackPanel>
 
         </StackPanel>

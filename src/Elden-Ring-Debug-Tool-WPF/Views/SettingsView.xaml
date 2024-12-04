@@ -13,19 +13,19 @@
              d:DesignHeight="600" d:DesignWidth="400" d:Background="{StaticResource Background}" DataContextChanged="OnDataContextChanged"
              d:DataContext="{d:DesignInstance vm:SettingsViewViewModel, IsDesignTimeCreatable=True}">
     <Grid>
-        <GroupBox Header="General Settings" VerticalAlignment="Top" BorderBrush="Black" Margin="10">
+        <GroupBox Header="常规设置" VerticalAlignment="Top" BorderBrush="Black" Margin="10">
             <StackPanel>
                 <Line Height="10" Visibility="Hidden"/>
-                <CheckBox Content="Show Warning" IsChecked="{Binding ShowWarning}"/>
+                <CheckBox Content="显示警告" IsChecked="{Binding ShowWarning}"/>
                 <Line Height="10" Visibility="Hidden"/>
-                <CheckBox Content="Spawn Untradeable" IsChecked="{Binding SpawnUntradeable}"/>
+                <CheckBox Content="生成不可交易物品" IsChecked="{Binding SpawnUntradeable}"/>
                 <Line Height="10" Visibility="Hidden"/>
-                <CheckBox Content="Edit Inventory Count" IsChecked="{Binding EditInventoryCounts}"/>
+                <CheckBox Content="编辑物品数量" IsChecked="{Binding EditInventoryCounts}"/>
                 <Line Height="10" Visibility="Hidden"/>
-                <CheckBox Content="Hide Dlc Entries" IsChecked="{Binding HideDlc}"/>
+                <CheckBox Content="隐藏DLC条目" IsChecked="{Binding HideDlc}"/>
                 <Line Height="10" Visibility="Hidden"/>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Load Timeout: "/>
+                    <Label Content="加载超时: "/>
                     <Line Width="20" Visibility="Hidden"/>
                     <wpfTool:TimeSpanUpDown Text="Load Timer" Width="100"/>
                 </StackPanel>

@@ -34,15 +34,15 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Margin="0,10,0,0">
             <Separator Visibility="Hidden"/>
-            <CheckBox Content="Enable HotKeys" IsChecked="{Binding EnableHotKeys}"/>
+            <CheckBox Content="启用热键" IsChecked="{Binding EnableHotKeys}"/>
             <Separator Visibility="Hidden"/>
             <!--<CheckBox Content="Handle HotKeys" x:Name="cbxHandleHotKeys"/>-->
             <Separator Visibility="Hidden"/>
             <Separator Margin="0,10,0,10"/>
-            <Label Content="HotKeys"/>
+            <Label Content="热键"/>
             <Grid>
                 <wpfTool:AutoSelectTextBox Height="20" Text="{Binding HotKeyFilter, UpdateSourceTrigger=PropertyChanged}" AutoSelectBehavior="OnFocus" TextAlignment="Center"/>
-                <Label Foreground="LightSlateGray" Content="Search..." IsEnabled="False" Margin="5,0,0,0" IsHitTestVisible="False"
+                <Label Foreground="LightSlateGray" Content="搜索..." IsEnabled="False" Margin="5,0,0,0" IsHitTestVisible="False"
                            Visibility="{Binding HotKeyFilter, Converter={StaticResource ResourceKey=StringToVisibilityConverter}}" HorizontalContentAlignment="Center"/>
             </Grid>
 
@@ -101,8 +101,8 @@
                         </Style>
                     </DataGrid.Resources>
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" MinWidth="150" Width="*"/>
-                        <DataGridTemplateColumn Header="Toggle State" MinWidth="75" Width="Auto">
+                        <DataGridTextColumn Header="名称" Binding="{Binding Name}" IsReadOnly="True" MinWidth="150" Width="*"/>
+                        <DataGridTemplateColumn Header="切换状态" MinWidth="75" Width="Auto">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate >
                                     <ToggleButton Height="25" Width="25" Style="{StaticResource ToggleButtonPower}"
@@ -112,7 +112,7 @@
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridTemplateColumn Header="HotKey" MinWidth="100" Width="Auto" >
+                        <DataGridTemplateColumn Header="热键" MinWidth="100" Width="Auto" >
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBox Margin="10,0,10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
@@ -121,7 +121,7 @@
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridTemplateColumn Header="Parameters" Width="50" >
+                        <DataGridTemplateColumn Header="参数" Width="50" >
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <ToggleButton Height="25" Width="25" Style="{StaticResource ToggleButtonParameters}" 

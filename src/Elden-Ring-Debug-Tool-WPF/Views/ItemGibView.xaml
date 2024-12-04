@@ -27,9 +27,9 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" Margin="5">
-                <Label Content="Category"/>
+                <Label Content="类别"/>
                 <ComboBox ItemsSource="{Binding CategoryCollectionView}" SelectedValue="{Binding SelectedItemCategory}"/>
-                <Label Content="Infusion"/>
+                <Label Content="注入"/>
                 <ComboBox ItemsSource="{Binding InfusionCollectionView}" IsEnabled="{Binding InfusionCollectionView.IsEmpty, Converter={StaticResource InverseBoolConverter}}" SelectedValue="{Binding SelectedInfusion}" 
                 />
                 <Grid>
@@ -39,10 +39,10 @@
                 </Grid>
             </StackPanel>
             <StackPanel Grid.Column="1" Margin="5">
-                <Label Content="Quantity" />
+                <Label Content="数量" />
                 <wpfTool:IntegerUpDown Minimum="1" Maximum="{Binding MaxQuantity}" Value="{Binding Quantity}"
                 ClipValueToMinMax="True" IsEnabled="{Binding SelectedItem, Converter={StaticResource ResourceKey=NullObjectToBoolConverter}}"/>
-                <Label Content="Upgrade" />
+                <Label Content="升级" />
                 <wpfTool:IntegerUpDown Minimum="0" Maximum="{Binding MaxUpgrade}" Value="{Binding UpgradeLevel}" ClipValueToMinMax="True" >
                     <wpfTool:IntegerUpDown.IsEnabled>
                         <MultiBinding Converter="{StaticResource MultiBoolConverter}">

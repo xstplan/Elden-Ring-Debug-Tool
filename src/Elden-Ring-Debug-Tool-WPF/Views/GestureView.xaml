@@ -17,10 +17,10 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Label Content="Gestures" HorizontalAlignment="Center" Grid.Row="0"/>
+            <Label Content="手势" HorizontalAlignment="Center" Grid.Row="0"/>
             <Grid HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="1">
                 <wpfTool:AutoSelectTextBox Height="20" AutoSelectBehavior="OnFocus" Width="300" Text="{Binding GestureFilter, UpdateSourceTrigger=PropertyChanged}"/>
-                <Label Foreground="LightSlateGray" Content="Search..." IsEnabled="False" Margin="5,0,0,0" IsHitTestVisible="False"
+                <Label Foreground="LightSlateGray" Content="搜索..." IsEnabled="False" Margin="5,0,0,0" IsHitTestVisible="False"
                        Visibility="{Binding GestureFilter, Converter={StaticResource ResourceKey=StringToVisibilityConverter}}"/>
             </Grid>
             <ItemsControl ItemsSource="{Binding GestureCollectionView}" Margin="25,0,25,10" Grid.Row="2">

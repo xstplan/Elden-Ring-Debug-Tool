@@ -18,18 +18,18 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <StackPanel>
-            <TextBlock Style="{DynamicResource TextBlockStyle}" Text="Inventory" HorizontalAlignment="Center"
+            <TextBlock Style="{DynamicResource TextBlockStyle}" Text="清单" HorizontalAlignment="Center"
                        FontSize="20" FontWeight="ExtraBlack" Margin="0,20,0,0" Grid.Row="0" />
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <ToggleButton HorizontalAlignment="Center" Content="Inventory" Width="70"
+                <ToggleButton HorizontalAlignment="Center" Content="清单" Width="70"
                               IsChecked="{Binding ShowStorage, Converter={StaticResource ResourceKey=InverseBoolConverter}}" />
-                <ToggleButton HorizontalAlignment="Center" Content="Storage" Width="70"
+                <ToggleButton HorizontalAlignment="Center" Content="存储" Width="70"
                               IsChecked="{Binding ShowStorage}" />
             </StackPanel>
-            <GroupBox Header="Inventory Counts">
+            <GroupBox Header="清单数量">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Label Content="Count:" FontWeight="Bold" />
+                        <Label Content="数量:" FontWeight="Bold" />
                         <Label Content="{Binding TotalInventoryEntries}" FontWeight="Bold" />
                         <Label Content="/" FontWeight="Bold" />
                         <Label Content="{Binding InventoryMax}" FontWeight="Bold" />
@@ -42,7 +42,7 @@
                             <ColumnDefinition />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <Label Content="Normal Items:" FontWeight="Bold" Grid.Column="0" />
+                        <Label Content="普通物品:" FontWeight="Bold" Grid.Column="0" />
                         <wpfTool:IntegerUpDown Value="{Binding InventoryCount}" FontWeight="Bold" Width="50"
                                                Background="{StaticResource Background}"
                                                Foreground="{StaticResource Foreground}" Grid.Column="1"
@@ -59,7 +59,7 @@
                             <ColumnDefinition />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <Label Content="Special Items:" FontWeight="Bold" Grid.Column="0" />
+                        <Label Content="特殊物品:" FontWeight="Bold" Grid.Column="0" />
                         <wpfTool:IntegerUpDown Value="{Binding HeldSpecialItems}" FontWeight="Bold" Width="50"
                                                Background="{StaticResource Background}"
                                                Foreground="{StaticResource Foreground}" Grid.Column="1"
@@ -76,7 +76,7 @@
         <TextBox Text="{Binding InventoryFilter, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="0"
                  HorizontalContentAlignment="Center" />
 
-        <TextBlock Text="Search Inventory..." Grid.Row="1" Grid.Column="0" Margin="5,2" MinWidth="50"
+        <TextBlock Text="搜索..." Grid.Row="1" Grid.Column="0" Margin="5,2" MinWidth="50"
                    HorizontalAlignment="Center" Foreground="DarkGray"
                    Visibility="{Binding InventoryFilter, Converter={StaticResource ResourceKey=StringToVisibilityConverter}}"
                    IsHitTestVisible="False" />
@@ -86,7 +86,7 @@
                   Background="{StaticResource Background}">
             <DataGrid.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Header="Remove Item" Foreground="White" Command="{Binding RemoveItemCommand}"
+                    <MenuItem Header="删除项目" Foreground="White" Command="{Binding RemoveItemCommand}"
                               CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}, Path=PlacementTarget.SelectedItem}" />
                 </ContextMenu>
             </DataGrid.ContextMenu>
@@ -113,13 +113,13 @@
             </DataGrid.Resources>
             <DataGrid.Columns>
                 <!-- <DataGridTextColumn Header="Index" Binding="{Binding Index}" /> -->
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
-                <DataGridTextColumn Header="Item ID" Binding="{Binding ItemID}" />
-                <DataGridTextColumn Header="Category" Binding="{Binding Category}" MinWidth="50" />
-                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" MinWidth="60" />
-                <DataGridTextColumn Header="Display ID" Binding="{Binding DisplayID}" MinWidth="75" />
-                <DataGridTextColumn Header="GaItem Handle" Binding="{Binding GaItemHandle}" MinWidth="90" />
-                <DataGridTextColumn Header="Pot Type" Binding="{Binding PotType}" MinWidth="90" />
+                <DataGridTextColumn Header="名称" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="物品 ID" Binding="{Binding ItemID}" />
+                <DataGridTextColumn Header="类别" Binding="{Binding Category}" MinWidth="50" />
+                <DataGridTextColumn Header="数量" Binding="{Binding Quantity}" MinWidth="60" />
+                <DataGridTextColumn Header="显示ID" Binding="{Binding DisplayID}" MinWidth="75" />
+                <DataGridTextColumn Header="句柄" Binding="{Binding GaItemHandle}" MinWidth="90" />
+                <DataGridTextColumn Header="Pot 类型" Binding="{Binding PotType}" MinWidth="90" />
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="3">
